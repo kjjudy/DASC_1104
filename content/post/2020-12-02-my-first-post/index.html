@@ -1,0 +1,20 @@
+---
+title: My first post
+author: ~
+date: '2020-12-02'
+slug: my-first-post
+categories: [introduction, R, data science]
+tags: [R, blogdown]
+---
+
+<link href="index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="index_files/anchor-sections/anchor-sections.js"></script>
+
+
+<p>My First Post</p>
+<pre class="r"><code>library(tidyverse)
+library(openintro)</code></pre>
+<pre class="r"><code>data(&quot;helium&quot;)
+helium2 &lt;- helium %&gt;% pivot_longer(c(air, helium), names_to = &quot;fill&quot;, values_to = &quot;distance&quot;)
+helium2 %&gt;% ggplot(aes(distance, fill = fill)) + geom_density(alpha = .5)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>

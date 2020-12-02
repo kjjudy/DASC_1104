@@ -1,0 +1,23 @@
+---
+title: My first post
+author: ~
+date: '2020-12-02'
+slug: my-first-post
+categories: [introduction, R, data science]
+tags: [R, blogdown]
+---
+
+My First Post
+
+```{r, message = FALSE}
+library(tidyverse)
+library(openintro)
+```
+
+```{r}
+data("helium")
+helium2 <- helium %>% pivot_longer(c(air, helium), names_to = "fill", values_to = "distance")
+helium2 %>% ggplot(aes(distance, fill = fill)) + geom_density(alpha = .5)
+```
+
+
