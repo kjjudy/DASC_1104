@@ -11,10 +11,16 @@ tags: [R, blogdown]
 <script src="index_files/anchor-sections/anchor-sections.js"></script>
 
 
-<p>My First Post</p>
+<div id="my-first-post-an-odd-graph" class="section level1">
+<h1>My First Post, an Odd Graph</h1>
+<p>After the 1976 Pro Bowl, where people questions if the football was filled with helium, some intrepid Ohio State students investigated whether a football filled with helium woud fly farther than one filled with air. Their results are displayed in the density plot below.</p>
 <pre class="r"><code>library(tidyverse)
-library(openintro)</code></pre>
+library(openintro)
+library(wesanderson)</code></pre>
 <pre class="r"><code>data(&quot;helium&quot;)
 helium2 &lt;- helium %&gt;% pivot_longer(c(air, helium), names_to = &quot;fill&quot;, values_to = &quot;distance&quot;)
-helium2 %&gt;% ggplot(aes(distance, fill = fill)) + geom_density(alpha = .5)</code></pre>
+helium2 %&gt;% ggplot(aes(distance, fill = fill)) + 
+  geom_density(alpha = .4) +
+  scale_fill_manual(values = wes_palette(&quot;BottleRocket2&quot;, n =2))</code></pre>
 <p><img src="index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
