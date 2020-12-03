@@ -9,7 +9,7 @@ tags: [R, blogdown]
 
 # My First Post, an Odd Graph
 
-After the 1976 Pro Bowl, where people questions if the football was filled with helium, some intrepid Ohio State students investigated whether a football filled with helium woud fly farther than one filled with air. Their results are displayed in the density plot below.
+After the 1976 Pro Bowl, where people questions if the football was filled with helium, some intrepid Ohio State students investigated whether a football filled with helium would fly farther than one filled with air. Their results are displayed in the density plot below.
 
 ```{r, message = FALSE}
 library(tidyverse)
